@@ -37,6 +37,7 @@ a linguagem de programação C padrão (não será aceita outra).
 **5**-  O grupo deverá discorrer sobre os aspectos teóricos que envolvem o projeto,
 bem como sobre todos os assuntos relativos ao desenvolvimento do sistema
 computacional. Entre os tópicos importantes, devem constar:
+
   a. Quais técnicas de ordenação foram escolhidas para a análise
   comparativa realizada pelo sistema e as justificativas;
   b. Exemplos de utilização prática das técnicas escolhidas ao longo da
