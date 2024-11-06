@@ -1,7 +1,7 @@
-// APS: Desenvolvimento de Sistema para An·lise de Performance de Algoritmos de OrdenaÁ„o de Dados
+// APS: Desenvolvimento de Sistema para An√°lise de Performance de Algoritmos de Ordena√ß√£o de Dados
 
 // ALUNO 1: Matheus Henrique dos Santos Silva, N8522F6
-// ALUNO 2: Philipe Gabriel Dos Santos Sime„o, N277DF2
+// ALUNO 2: Philipe Gabriel Dos Santos Sime√£o, N277DF2
 // ALUNO 3: Gabriel Melero Thomaz, G806620
 
 #include <stdio.h>
@@ -9,7 +9,7 @@
 #include <time.h>
 
 
-//FunÁ„o para gerar um arquivo de numeros aleatÛrios
+//Fun√ß√£o para gerar um arquivo de numeros aleat√≥rios
 void gerar_numeros_aleatorios(int quantidade) {
     static int contador = 0; 
     contador++;
@@ -25,16 +25,16 @@ void gerar_numeros_aleatorios(int quantidade) {
 
     srand(time(NULL) + contador); 
     for (int i = 0; i < quantidade; i++) {
-        int numero = (rand() % 10000) + 100000;
+        int numero = 999999-((rand() % 10000) + 100000);
         fprintf(arquivo, "%d\n", numero);
     }
 
     fclose(arquivo);
 
-    printf("Arquivo %s criado com %d n˙meros aleatÛrios.\n", nome_arquivo, quantidade);
+    printf("Arquivo %s criado com %d n√∫meros aleat√≥rios.\n", nome_arquivo, quantidade);
 }
 
-// FunÁ„o para contar quantos n˙meros inteiros est„o no arquivo
+// Fun√ß√£o para contar quantos n√∫meros inteiros est√£o no arquivo
 int contar_numeros_arquivo(const char *caminho_arquivo) {
     FILE *arquivo = fopen(caminho_arquivo, "r");
     if (arquivo == NULL) {
@@ -52,11 +52,11 @@ int contar_numeros_arquivo(const char *caminho_arquivo) {
     return contador;
 }
 
-// FunÁ„o para ler os n˙meros do arquivo e armazen·-los em um array
+// Fun√ß√£o para ler os n√∫meros do arquivo e armazen√°-los em um array
 int* ler_numeros_arquivo(const char *caminho_arquivo, int *quantidade) {
     *quantidade = contar_numeros_arquivo(caminho_arquivo);
     if (*quantidade <= 0) {
-        printf("Nenhum n˙mero encontrado no arquivo ou erro de leitura.\n");
+        printf("Nenhum n√∫mero encontrado no arquivo ou erro de leitura.\n");
         return NULL;
     }
 
@@ -68,7 +68,7 @@ int* ler_numeros_arquivo(const char *caminho_arquivo, int *quantidade) {
 
     int *array = (int *)malloc(*quantidade * sizeof(int));
     if (array == NULL) {
-        printf("Erro ao alocar memÛria.\n");
+        printf("Erro ao alocar mem√≥ria.\n");
         fclose(arquivo);
         return NULL;
     }
@@ -81,17 +81,17 @@ int* ler_numeros_arquivo(const char *caminho_arquivo, int *quantidade) {
     return array;
 }
 
-// FunÁ„o para mostrar os n˙meros do arquivo
+// Fun√ß√£o para mostrar os n√∫meros do arquivo
 void mostrar_numeros_arquivo(const char *caminho_arquivo) {
     int quantidade;
     int *numeros = ler_numeros_arquivo(caminho_arquivo, &quantidade);
 
     if (numeros == NULL) {
-        printf("Erro ao ler os n˙meros do arquivo.\n");
+        printf("Erro ao ler os n√∫meros do arquivo.\n");
         return;
     }
 
-    printf("N˙meros no arquivo %s:\n", caminho_arquivo);
+    printf("N√∫meros no arquivo %s:\n", caminho_arquivo);
     for (int i = 0; i < quantidade; i++) {
         printf("%d\n", numeros[i]);
     }
