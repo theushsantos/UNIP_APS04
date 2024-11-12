@@ -208,7 +208,7 @@ int main() {
                 printf("Escolha uma opção: ");
                 scanf("%d", &metodo);
 
-                inicio = clock();  // Início do cronômetro
+                inicio = clock(); 
                 linha();
 
                 switch (metodo) {
@@ -230,8 +230,8 @@ int main() {
                         continue;
                 }
 
-                fim = clock();  // Fim do cronômetro
-                tempo_gasto = (double)(fim - inicio) / CLOCKS_PER_SEC;  // Tempo em segundos
+                fim = clock();  
+                tempo_gasto = (double)(fim - inicio) / CLOCKS_PER_SEC; 
 
                 printf("Tempo gasto para ordenacao: %f segundos\n", tempo_gasto);
                 
