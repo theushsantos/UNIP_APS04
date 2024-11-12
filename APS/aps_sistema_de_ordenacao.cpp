@@ -7,6 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 
 
@@ -248,15 +249,16 @@ int main() {
                 break;
 
             case 4:
-            	linha();
+            	
                 printf("Saindo do programa.\n");
                 return 0;
 
             default:
             	linha();
                 printf("Opcao invalida! Tente novamente.\n");
-        linha();
+        
         }
+        linha();
     }
- return 0;   
+    
 }
